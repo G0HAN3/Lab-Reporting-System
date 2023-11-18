@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+          text-decoration: none;
+          list-style: none;
+          scroll-behavior: smooth;
+        }
+        body {font-family: var(--font);color: var(--txtclr);}
+        :root {
+         --font: Raleway;
+         --clrblack: #1f1f1f;
+         --clrwhite: #dfdfdf;
+         --luxury: #246d74;
+         --txtclr: #d1d1d1;
+         --grad1: linear-gradient(to bottom,  #4568dc, #0ef);
+         --grad2: linear-gradient(to top,  #4568dc, #0ef);
+        }
+        #main { 
+          height: 100vh; 
+          width: 100vw; 
+          align-items: center;
+          background: linear-gradient(to bottom,  #4568dc, #0ef);
+        }
+
+
+        /* BANNER */
+        #banner{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: #d1d1d1;
+            color: #323232;
+
+            border-top: 1px solid #dfdfdfa4;
+            border-left: 1px solid #dfdfdfa4;
+
+
+            position: absolute;
+            top: 40px;
+            right: 50px;
+
+            width: 1170px;
+            height: 170px;
+            border-radius: 8px;
+
+            background: #ffffff2d;
+            box-shadow: 5px 5px 30px #00000052;
+            backdrop-filter: blur(5px);
+        }
+
+        #banner h1{
+          font-size: 65px;
+          position: absolute;
+          left: 50px;
+        }
+        #banner .b2{
+          font-size: 25px;
+          font-weight: 600;
+          position: absolute;
+          right: 50px;
+          margin-top: -30px;
+          letter-spacing: 2px;
+        }
+        #banner .b3{
+          font-size: 15px;
+          font-weight: 600;
+          position: absolute;
+          right: 50px;
+          margin-top: 30px;
+          letter-spacing: 2px;
+        }
+        /* BANNER */
+
+
+        /* BLANK */
+        .blank{
+            /* margin-top: 55px; */
+            height: 15px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 30px #00000052;
+            background: #ffffff2d;
+            backdrop-filter: blur(5px);
+        }
+        #blank1{position: absolute;top: 40px;  left: 50px;}
+        #blank2{position: absolute;top: 70px; left: 50px;}
+        /* BLANK */
+
+
+        /* ADD BUTTON */
+        #newBtn{
+          position: absolute;
+          top: 260px;
+          left: 220px;
+
+        }
+        #newBtn button{
+          height: 35px;
+          width:  35px;
+          font-size: 40px;
+          padding: 0;
+          text-align: center;
+          align-items: center;
+        }
+        #newBtn button p{
+          position: absolute;
+          top: -4px;
+          left: 6px;
+        }
+        #newBtn button:hover{
+          background: #f5f5f584;
+        }
+
+
+        /* WORKING AREA */
+        #working-area{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+
+            position: absolute;
+            top: 250px;
+            left: 316px;
+
+            /* border: 2px solid #0ef; */
+        }
+
+        #working-area .userTab{
+            padding: 10px 30px;
+            height: 60px;
+            width: 500px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 30px #00000052;
+            background: #ffffff2d;
+            backdrop-filter: blur(5px);
+
+            border-top: 1px solid #dfdfdfa4;
+            border-left: 1px solid #dfdfdfa4;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            color: #323232;
+        }
+
+        #working-area .userTab .testName{
+            position: absolute;
+            right: 85px;
+        }
+        #working-area .userTab .viewBtn{
+            position: absolute;
+            right: 20px;
+            margin-top: -10px;
+        }
+
+
+        button {
+            height: 25px;
+            width:  55px;
+            border: 1px solid #323232;
+
+            padding: 3px 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: var(--grad2);
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+
+            border-top: 1px solid #dfdfdfa4;
+            border-left: 1px solid #dfdfdfa4;
+
+        }
+                    
+        button:hover {
+            background-color: #5877dd9e;
+            box-shadow: 0px 15px 20px #4568dc90;
+            /* color: #fff; */
+            transform: translateY(-7px);
+        }
+        
+        button:active {
+            transform: translateY(-1px);
+        }
+
+
+        #dashBtn{
+          color: #323232;
+          background: #d1d1d12e;
+          height: 30px;
+          width: 68px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding: 5px 10px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+
+          position: absolute;
+          top: 120px;
+          left: 115px;
+          border-top: 1px solid #dfdfdfa4;
+          border-left: 1px solid #dfdfdfa4;
+        }
+        #dashBtn a{
+          color: #323232;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="main">
+        <!-- BANNER -->
+        <div id="banner">
+            <h1>White Labs - Dashboard</h1>
+        </div>
+
+        <!-- blankspace -->
+        <div id="blank1" class="blank"></div>
+        <div id="blank2" class="blank"></div>
+
+
+
+        <!-- WORKING AREA -->
+        <div id="working-area">
+
+
+
+            <% for(let user of users){ %>
+
+                <div class="userTab">
+                    <div class="userName txt">
+                        <h2><%= user.name %></h2>
+                    </div>
+                    <div class="userAge txt">
+                        <h4><%= user.age %></h4>
+                    </div>
+                    <div class="testName txt">
+                        <h4><%= user.test %></h4>
+                    </div>
+                    <form method="GET" action="/home/user/dashboard/<%= user.name%>">
+                        <div class="viewBtn">
+                            <button class="view"> View
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+            <% } %>
+
+        </div>
+            
+        <div id="dashBtn"><a href="http://localhost:8080/home">Home</a></div>
+
+
+
+    </div>
+</body>
+</html>

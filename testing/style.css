@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@font-face { font-family: poppins ; src: url('fonts/Poppins-Light.ttf'         ); }
+@font-face { font-family: molde   ; src: url('fonts/Molde-Expanded-Regular.ttf'); }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body {font-family: var(--font);color: var(--txtclr);}
+
+:root {
+ --font: poppins;
+ --clrblack: #1f1f1f;
+ --clrwhite: #dfdfdf;
+ --luxury: #246d74;
+ --txtclr: #d1d1d1;
+ --grad1: linear-gradient(to bottom,  #4568dc, #0ef);
+}
+
+
+#main { 
+  height: 100vh; 
+  width: 100vw; 
+  align-items: center;
+  background: #232025;
+  background-image: url(img/bg3.jpg);
+  background-size: cover; 
+  background-position: center center;
+}
+
+
+/* BANNER */
+#banner{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #d1d1d1;
+  color: #323232;
+
+  position: absolute;
+  top: 40px;
+  right: 50px;
+
+  width: 76%;
+  height: 170px;
+  border-radius: 8px;
+  
+  background: #ffffff2d;
+  box-shadow: 5px 5px 30px #00000052;
+  backdrop-filter: blur(5px);
+}
+
+#banner h1{
+  font-size: 55px;
+  position: absolute;
+  top: 20px;
+}
+#banner .b2{
+  font-size: 25px;
+  position: absolute;
+  left: 44px;
+  margin-top: 75px;
+  letter-spacing: 2px;
+}
+#banner .b3{
+  font-size: 20px;
+  position: absolute;
+  right: 40px;
+  margin-top: 75px;
+  letter-spacing: 5px;
+}
+/* BANNER */
+
+
+/* BLANK */
+.blank{
+  height: 15px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 30px #00000052;
+  background: #ffffff2d;
+  backdrop-filter: blur(5px);
+}
+#blank1{
+  position: absolute;
+  top: 40px;  
+  left: 50px;
+}
+#blank2{
+  position: absolute;
+  top: 70px;  
+  left: 50px;
+}
+/* BLANK */
+
+
+/* SIDEBAR */
+#sidebar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  font-family: raleway;
+  letter-spacing: 2px;
+  padding: 40px;
+
+  position: absolute;
+  top: 130px;  
+  left: 50px;
+
+  height: 40%;
+  width: 200px;
+  border-radius: 8px;
+  
+  box-shadow: 5px 5px 30px #00000052;
+  background: #ffffff1a;
+  backdrop-filter: blur(5px);
+
+  font-size: 12px;
+}
+
+#sidebar .navs{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#sidebar .navs a{
+  color: #d1d1d1;
+  color: #323232;
+}
+/* SIDEBAR */
+
+
+
+
+/* WORKING AREA */
+
+
+#working-area{
+  /* position: absolute;
+  top: 45%;
+  left: 40%; */
+  display: flex;
+  gap: 150px;
+}
+
