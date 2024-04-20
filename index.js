@@ -25,7 +25,7 @@ async function main(){
 
 
 // HOME ROUTE
-app.get("/home", (req,res) => {
+app.get("/", (req,res) => {
     res.render("home.ejs");
 });
 
@@ -39,17 +39,12 @@ app.get("/home/user", (req,res) => {
     res.render("user.ejs");
 });
 
-
-
-
-
 // DOC DASHBOARD
 app.get("/home/doc/dashboard", async (req,res) => {
     let users = await User.find();
     // console.log(user);
     res.render("docDash.ejs", {users});
 });
-
 
 // NEW ROUTE
 app.get("/home/doc/dashboard/new", (req, res) => {
@@ -139,11 +134,7 @@ app.get("/home/user/dashboard/:id", async (req,res) => {
     const user = await User.findOne({ name: id });
     // console.log(user);
     res.render("userDetails.ejs" , {user});
-
-   
 });
-
-
 
 app.get("/", (req,res) => {
     res.send("working out");
